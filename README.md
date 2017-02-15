@@ -13,4 +13,8 @@ For example, nUnsorted(5, 10) will return a 2D array countaining 5 identical arr
 
 ###For accuracy, we sorted 100,000 arrays in each 2D array, and used the data to generate a graph.
 
+Here is our data as well as a graph:
+<a href="https://docs.google.com/document/d/1QzVH7MYl6loJn0x8B1s-nFBsJL9L2mCvKXcqAjJ2Ywc/pub">DATA</a>
+
+
 
