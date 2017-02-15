@@ -4,7 +4,7 @@
 
 ###This array contains an adjustable number of n-sized arrays arranged in descending order. 
 
-For example, nUnsorted(5, 10) will return a 2D array countaining 5 identical arrays: [4, 3, 2, 1, 0]
+For example, nUnsorted(5, 10) will return a 2D array countaining 5 identical arrays: each one is [4, 3, 2, 1, 0]
 
 ###Then, our function access(int[][]) then calculates the amount of time it takes to sort each of those arrays. 
 
