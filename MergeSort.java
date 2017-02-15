@@ -78,7 +78,6 @@ public class MergeSort {
       public static void sort( int[] arr ) 
     {  int[] sorted;
 	arr = MS(split1(arr), split2(arr));
-	printArray(arr);
     }//end sort() 
 
     //returns first half of split array

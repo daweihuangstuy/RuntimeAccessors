@@ -18,7 +18,7 @@
   ANALYSIS:
   <INSERT YOUR RESULTS ANALYSIS HERE>
   ======================================*/
-import java.util.Arrays;
+
 public class MergeSortTester 
 {
     //returns backwards int[] array of n integers 
@@ -30,8 +30,26 @@ public class MergeSortTester
 	}
 	return bob;
     }
-	
+
+    // 2D int array containing arrays of unsorted lists
+    public static int[][] nUnsorted(int numArr, int n){
+	int[][] bob = new int[numArr][n];
+	for(int i = 0; i < numArr; i++){
+	    bob[i] = genrev(n);
+	}
+	return bob;
+    }
     
+    // calculates the average time it takes to sort elements in the array
+	public static double access(int[][] arr){
+	long start = System.currentTimeMillis();
+	for(int i = 0; i < arr.length; i++){
+	    MergeSort.sort(arr[i]);
+	}
+	long end = System.currentTimeMillis();
+	return end - start;
+
+	}
     /******************************
      * execution time analysis 
      * Runtime accessed with System.currentTimeMillis() 
@@ -40,8 +58,18 @@ public class MergeSortTester
      ******************************/
     public static void main( String[] args ) 
     {
-	// System.out.println(Arrays.toString(genrev(10)));
-	long start = System.currentTimeMillis();
+
+	//long from access divided by number of arrays for average runTime
+	int[][] cs = nUnsorted(10000, 16);
+	int[][] cs2 = nUnsorted(100000, 16);
+	double tim = access(cs) / 10000.0;
+	double george = access(cs2) / 100000.0;
+	System.out.println("Approximate time to sort an array of 16 elements: " + tim + " milliseconds.");
+	System.out.println("Approximate time to sort an array of 16 elements: " + george + " milliseconds.");
+	
+
+       
+	
 	
 
     }//end main
